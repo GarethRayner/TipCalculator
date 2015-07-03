@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TipCalculator">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/billAmount"
+        android:layout_below="@+id/billAmountText"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/bill"
+        android:labelFor="@id/billAmountText"
+        android:textColor="#a3000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/billAm"
+        android:id="@+id/billAmountText"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/billAmount"
+        android:layout_alignEnd="@+id/billAmount"
+        android:textColor="#a3000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/shouldTip"
+        android:id="@+id/shouldTipText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/billAmount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/recTip"
+        android:layout_below="@+id/shouldTipText"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/shouldTipText"
+        android:text="@string/poundDefault" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/totalPay"
+        android:id="@+id/billTotalText"
+        android:layout_below="@+id/recTip"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/billTotal"
+        android:layout_below="@+id/billTotalText"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/recTip"
+        android:text="@string/poundDefault" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tipPerLabel"
+        android:id="@+id/tipPercentT"
+        android:layout_above="@+id/tipPercent"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/share"
+        android:id="@+id/shareTotalT"
+        android:layout_above="@+id/shareTotal"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/shareTotal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/poundDefault" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/tipPercent"
+        android:hint="@string/percentHint"
+        android:text="@string/defaultTen"
+        android:labelFor="@string/tipPerLabel"
+        android:layout_above="@+id/shareTotalT"
+        android:layout_toStartOf="@+id/billAmount"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/shared"
+        android:id="@+id/shareT"
+        android:layout_alignTop="@+id/tipPercentT"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/sharedBy"
+        android:layout_alignBottom="@+id/tipPercent"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/billAmount"
+        android:text="@string/defaultOne"
+        android:hint="@string/tipHint"
+        android:labelFor="@id/shareT" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/percent"
+        android:id="@+id/perSymbol"
+        android:layout_alignBottom="@+id/tipPercent"
+        android:layout_toEndOf="@+id/tipPercent" />
+
+</RelativeLayout>
